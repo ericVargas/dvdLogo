@@ -8,22 +8,48 @@ body {
     height: 100%;
 }
 
-#container{
+#container {
     height: 100vh;
     width: 100vw;
     background-color: #000;
     position: relative;
 }
 
-.logo{
+.logo {
     position: absolute;
     top: 0;
     left: 0;
     width: 228px;
     height: 135px;
-    background-color: #000;
+    background-color: #fff;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-mask-box-image: url('logo.png');
+    background-image: url(logo.png);
+    -webkit-animation: colorSwap 60s infinite alternate;
+	-moz-animation: coloSwaprSwap 60s infinite alternate;
+	-ms-animation: colorSwap 60s infinite alternate;
+	-o-animation: colorSwap 60s infinite alternate;
+	animation: colorSwap 60s infinite alternate;
 }
 
+@keyframes colorSwap {
+    0% {
+        background-color: blue;
+    }
+
+    25% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: yellow;
+    }
+
+    75% {
+        background-color: orange;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
